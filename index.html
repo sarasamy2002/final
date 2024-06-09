@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Near To You</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css">
+	<title>Modal Popup in HTML CSS Javascript | Codehal</title>
+
+
+	<link rel="stylesheet" href="path/to/font-awesome/css/all.min.css">
+
+
+
+
+
+
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+	<style>
+		.wow:first-child {
+			visibility: hidden;
+		}
+	</style>
+	<style>
+
+	</style>
+
+</head>
+
+<body>
+
+
+	<header>
+		<a href="#" class="logo0">Near To You</a>
+		<div class="menu-btn0"></div>
+		<div class="navigation0">
+			<div class="navigation-items0">
+
+
+
+				<a href="#home" id="AboutUs" class="arabic">About Us</a>
+				<a href="#labs02" id="labs" class="arabic">Labs</a>
+				<a href="#service" id="sevices" class="arabic">Our Srvices</a>
+				<a href="#Physical" id="ph" class="arabic"> Physical Therapy</a>
+				<a href="#about" id="phs" class="arabic">Pharmacies</a>
+				<a href="#Dentists44" id="Dentists" class="arabic"> Dentists</a>
+				<a href="#mentalcare" id="mental" class="arabic"> Mental Care</a>
+				<a href="#specialist" id="Specialist" class="arabic">Specialist </a>
+
+
+				<button onclick="changeLanguage('ar')" class="b777">Arabic</button>
+				<button onclick="changeLanguage('en')" class="b777">English</button>
+
+
+
+
+
+				<!--<button onclick="changeLanguage('ar')" class="b777">Arabic</button>--
+     			<button onclick="changeLanguage('en')" class="b777">English</button>-->
+			</div>
+
+
+
+
+		</div>
+
+
+
+
+	</header>
+
+	<section class="home0">
+		<video class="video-slide active" src="videos/video4.mp4" autoplay muted loop></video>
+		<video class="video-slide" src="videos/video2.mp4" autoplay muted loop></video>
+		<video class="video-slide" src="videos/video3.mp4" autoplay muted loop></video>
+		<video class="video-slide" src="videos/video1.mp4" autoplay muted loop></video>
+		<video class="video-slide" src="videos/video5.mp4" autoplay muted loop></video>
+		<div class="content0 active">
+			<h1 id="h1" class="arabic">Best Medical Services.</h1>
+			<p id="p1" class="arabic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae porro commodi nam
+				temporibus exercitationem deleniti non aperiam natus ipsa asperiores eaque consectetur, ex quod dolore,
+				in quam itaque, quis enim!</p>
+			<a href="#form " id="book" class="arabic">Book Now</a>
+		</div>
+		<div class="content0">
+			<h1 id="h2" class="arabic">Book Your Doctor Appointment Online.</h1>
+			<p id="p2" class="arabic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae porro commodi nam
+				temporibus exercitationem deleniti non aperiam natus ipsa asperiores eaque consectetur, ex quod dolore,
+				in quam itaque, quis enim!</p>
+			<a href="#" id="book2" class="arabic">Book Now</a>
+		</div>
+		<div class="content0">
+			<h1 id="h3" class="arabic">A Dedicated Doctor You Can Trust.</h1>
+			<p id="p3" class="arabic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae porro commodi nam
+				temporibus exercitationem deleniti non aperiam natus ipsa asperiores eaque consectetur, ex quod dolore,
+				in quam itaque, quis enim!</p>
+			<a href="#" id="book3" class="arabic">Book Now</a>
+		</div>
+		<div class="content0">
+			<h1 id="h4" class="arabic">How Is Your Health Today? </h1>
+			<p id="p4" class="arabic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae porro commodi nam
+				temporibus exercitationem deleniti non aperiam natus ipsa asperiores eaque consectetur, ex quod dolore,
+				in quam itaque, quis enim!</p>
+			<a href="#" id="book4" class="arabic">Read More</a>
+		</div>
+		<div class="content0">
+			<h1 id="h5" class="arabic">Digital Way To Take >Medical Services. </h1>
+			<p id="p5" class="arabic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae porro commodi nam
+				temporibus exercitationem deleniti non aperiam natus ipsa asperiores eaque consectetur, ex quod dolore,
+				in quam itaque, quis enim!</p>
+			<a href="#" id="book5" class="arabic">Read More</a>
+		</div>
+
+		<div class="slider-navigation0">
+			<div class="nav-btn0 active"></div>
+			<div class="nav-btn0"></div>
+			<div class="nav-btn0"></div>
+			<div class="nav-btn0"></div>
+			<div class="nav-btn0"></div>
+		</div>
+	</section>
+
+	<script type="text/javascript">
+		//javascript of responsive navigation menu
+		const menuBtn = document.querySelector(".menu-btn0");
+		const navigation = document.querySelector(".navigation0");
+
+		menuBtn.addEventListener("click", () => {
+			menuBtn.classList.toggle("active");
+			navigation.classList.toggle("active");
+		});
+
+		//javascript for video slider navigation
+		const btns = document.querySelectorAll(".nav-btn0");
+		const slides = document.querySelectorAll(".video-slide");
+		const contents = document.querySelectorAll(".content0");
+
+		var sliderNav = function (manual) {
+			btns.forEach((btn) => {
+				btn.classList.remove("active");
+			});
+
+			slides.forEach((slide) => {
+				slide.classList.remove("active");
+			});
+
+			contents.forEach((content) => {
+				content.classList.remove("active");
+			});
+
+			btns[manual].classList.add("active");
+			slides[manual].classList.add("active");
+			contents[manual].classList.add("active");
+		}
+
+		btns.forEach((btn, i) => {
+			btn.addEventListener("click", () => {
+				sliderNav(i);
+			});
+		});
+	</script>
+
+	<!--Why choose us-->
+
+	<section id="home" class="section__container why__container">
+		<div class="why__image">
+			<img src="images/choose-us.jpg" alt="why choose us" />
+		</div>
+		<div class="why__content">
+			<h2 class="section__header arabic" id="h22">Why Choose Us</h2>
+			<p id="choose1" class="arabic">
+				With a steadfast commitment to your well-being, our team of highly
+				trained healthcare professionals ensures that you receive nothing
+				short of exceptional patient experiences.
+			</p>
+			<div class="why__grid">
+				<span><i class="ri-hand-heart-line"></i></span>
+				<div>
+					<h4 id="h23" class="arabic"> Mental Health Care</h4>
+					<p id="choose2" class="arabic">
+						Our goal is caring about your mental health and
+						now you can get your free consulations with a proffesional therapy to help you
+						call 16676.
+					</p>
+				</div>
+				<span><i class="ri-truck-line"></i></span>
+				<div>
+					<h4 id="h24" class="arabic">Free Ambulance Car</h4>
+					<p id="choose3" class="arabic">
+						A compassionate initiative to prioritize your health and
+						well-being without any financial burden . call 123
+					</p>
+				</div>
+				<span><i class="ri-hospital-line"></i></span>
+				<div>
+					<h4 id="h25" class="arabic">Physical Care </h4>
+					<p id="choose4" class="arabic">
+						Our Medical and services offer advanced healthcare
+						solutions now you can get your Physical therapy sessions at home in case you have serious
+						injries. call 0403406801
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+
+	<!-- Start About -->
+	<section id="labs02" class="about">
+		<div class="container">
+			<h2 id="labs1" class="arabic">Top High Rated Labs For This Year</h2>
+			<div class="content">
+				<div class="box wow bounceInUp">
+
+					<div class="inner">
+						<div class="img">
+							<img src="images/الحياه.png" alt="about" />
+						</div>
+						<div class="text">
+							<h4 id="lab1" class="arabic">AL-HAYAH LAB</h4>
+							<p id="lab11" class="arabic">In front of the university hospital</p>
+							<BR>
+							<p id="phone1" class="arabic">0114 445 7990</p>
+						</div>
+					</div>
+				</div>
+				<div class="box wow bounceInUp" data-wow-delay="0.2s">
+					<div class="inner">
+						<div class="img">
+							<img src="images/معامل البرج.png" alt="about" />
+						</div>
+						<div class="text">
+							<h4 id="lab2" class="arabic">AL-BORG LAB</h4>
+							<BR>
+							<p id="lab22" class="arabic"> 13 el- nahas st , Tanta </p>
+							<BR>
+
+							<p id="phone2" class="arabic"> 040 3349072</p>
+						</div>
+					</div>
+				</div>
+				<div class="box wow bounceInUp" data-wow-delay="0.4s">
+					<div class="inner">
+						<div class="img">
+							<img src="images/الصفوه.png" alt="about" />
+						</div>
+						<div class="text">
+							<h4 id="lab3" class="abic"> EL- SAFWA LAB</h4>
+							<BR>
+							<p>dr.ngaaty Street</p>
+							<BR>
+
+
+							<p> 01100255599</p>
+						</div>
+					</div>
+				</div>
+				<div class="box wow bounceInUp">
+					<div class="inner">
+						<div class="img">
+							<img src="images/المختبر.jpg" alt="about" />
+						</div>
+						<div class="text">
+							<h4>AL-MOKHTABAR</h4>
+							<BR>
+							<p> el gamaa st, Tanta </p>
+							<BR>
+
+
+							<p>010 90011213</p>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</section>
+	<!-- End About -->
+
+
+	<!-- Start Service -->
+	<section class="service" id="service">
+		<div class="container">
+			<div class="content">
+				<div class="text box wow slideInLeft">
+					<h2 id="service1" class="arabic">Services</h2>
+					<p id="service2" class="arabic"> KNOW MORE </p>
+					<p id="service3" class="arabic">WE MAKE IT FAST AND EAISER FOR YOU</p>
+					<a href="#form" class="btn" id="service4" class="arabic">BOOK NOW</a>
+				</div>
+				<div class="accordian box wow slideInRight">
+					<div class="accordian-container active">
+						<div class="head">
+							<h4 id="service5" class="arabic">WORK TIME </h4>
+							<span class="fa fa-angle-down"></span>
+						</div>
+						<div class="body">
+							<p id="service6" class="arabic">OPENS AT 9am ,CLOSES AT 11pm</p>
+						</div>
+					</div>
+					<div class="accordian-container">
+						<div class="head">
+							<h4 id="service7" class="arabic">HOTLINE</h4>
+							<span class="fa fa-angle-up"></span>
+						</div>
+						<div class="body">
+							<p id="service8" class="arabic">16676</p>
+						</div>
+					</div>
+					<div class="accordian-container">
+						<div class="head">
+							<h4 id="service9" class="arabic">WAITING TIME</h4>
+							<span class="fa fa-angle-up"></span>
+						</div>
+						<div class="body">
+							<p id="service10" class="arabic"> ABOUT 15 minutes</p>
+						</div>
+					</div>
+					<div class="accordian-container">
+						<div class="head">
+							<h4 id="service11" class="arabic"> FEES</h4>
+							<span class="fa fa-angle-up"></span>
+						</div>
+						<div class="body">
+							<p id="service12" class="arabic"> BETWEEN 200:300 EGP</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Service -->
+
+	<!--Start Classes -->
+	<br>
+	<br>
+	<div class="box text wow slideInRight">
+		<h2>Best Physiotherapists For You </h2>
+		<p> Physiotherapy and Sport Injuries</p>
+		<div class="container m-5" id="Physical">
+			<div class="row">
+				<div class="col "><img class="item-img" src="images/pexels-photo-13156759.jpgقق.jpg" alt="classes" />
+				</div>
+				<div class="col">
+					<div class="item">
+						<h5 id="class1" class="arabic"> Egyptian French Center for Physiotherapy and Slimming</h5>
+
+						<br />
+						<br />
+						<br />
+						<p id="class2" class="arabic">
+							<br />
+							<br />
+
+							Mahalla El-Kubra - Al-Bandar Square - next to Al-Pasha Mosque, El-Mahalla El-Kubra, Western
+						</p>
+						<br />
+						<a href="" id="class3" class="arabic">0402249950</a>
+					</div>
+				</div>
+
+				<div class="col"><img class="item-img" src="images/pexels-photo-5207099.jpg" alt="classes" />
+				</div>
+				<div class="col">
+					<div class="item">
+						<h5 id="class4" class="arabic">Al-Ayashi Center, Dr. Ahmed Gamal El-Din Al-Shaer, nutrition and
+							physical therapy consultant</h5>
+						<br />
+						<br />
+						<p id="class5" class="arabic"> 11 Al-Thanaa Street, off Madrasa Al-Zeraa Street, Tanta Center,
+							in front of Al-Ayashi Hospital
+							The specialist </p>
+						<a href="" id="class6" class="arabic">01094073978</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+
+
+		<!-- Start Today -->
+		<section class="start-today">
+			<div class="container">
+				<div class="content">
+					<div class="box text wow slideInLeft">
+						<h2 id="today1" class="arabic">Start Your Physical Therapy Today</h2>
+						<p id="today2" class="arabic"> Book online or call 16676 </p>
+						<p id="today4" class="arabic"> 15000 Doctors - 9000 Professors and Consultants - More than 40
+							Specialties </p>
+						<a id="today3" href="#form" class="btn arabic">Book Now</a>
+					</div>
+					<div class="box img wow slideInRight">
+						<img src="images/shutterstock_1243542709-scaled.jpg" alt="start today" />
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!-- End Start Today -->
+
+		<!-- Start Schedule -->
+		<!-- Start About -->
+		<section class="about" id="about">
+			<div class="container">
+				<h2>Highly Recommended Pharmacies </h2>
+				<div class="content">
+					<div class="box wow bounceInUp">
+						<div class="inner">
+							<div class="img">
+								<img src="images/accountlogo.png" alt="about" />
+							</div>
+							<div class="text">
+								<h4 id="about1" class="arabic">EL- Ezaby Pharmcy</h4>
+								<p id="about2" class="arabic"> hassan hasseb st., Tanta </p>
+								<BR>
+								<p id="about3" class="arabic"> Opens at 8 AM </p>
+								<BR>
+								<p id="about4" class="arabic">3531734702</p>
+								<BR>
+							</div>
+						</div>
+					</div>
+					<div class="box wow bounceInUp" data-wow-delay="0.2s">
+						<div class="inner">
+							<div class="img">
+								<img src="images/431101839_813214297489757_6509886970096202871_n.jpg" alt="about" />
+							</div>
+							<div class="text">
+								<h4 id="about5" class="arabic">EL-Bendary pharmcy </h4>
+								<p id="about6" class="arabic"> EL-Glaa st , Tanta </p>
+								<BR>
+								<p id="about7" class="arabic"> Opens 24 hours </p>
+								<BR>
+								<p id="about8" class="arabic"> 0403300088</p>
+								<br>
+							</div>
+						</div>
+					</div>
+					<div class="box wow bounceInUp" data-wow-delay="0.4s">
+						<div class="inner">
+							<div class="img">
+								<img src="images/images.png" alt="about" />
+							</div>
+							<div class="text">
+								<h4 id="about9" class="arabic">Hisham&fouad Pharmacy </h4>
+								<p id="about10" class="arabic"> EL-Helw st, Tanta</p>
+								<BR>
+								<p id="about11" class="arabic"> closes at 2 AM</p>
+								<BR>
+
+								<p id="about12" class="arabic">010 06664531 </p>
+							</div>
+						</div>
+					</div>
+					<div class="box wow bounceInUp">
+						<div class="inner">
+							<div class="img">
+								<img src="images/صيدلية_الطرشوبي.jpg" alt="about" />
+							</div>
+							<div class="text">
+								<h4 id="about13" class="arabic">El tarboshy pharmacy
+								</h4>
+								<p id="about14" class="arabic">sedky st , Tanta </p>
+								<BR>
+								<p id="about15" class="arabic">Opens 24 hours </p>
+								<BR>
+
+								<p id="about16" class="arabic">040 3334395</p>
+							</div>
+
+						</div>
+
+					</div>
+
+
+				</div>
+			</div>
+		</section>
+		<!-- End About -->
+
+		<section class="section2 row">
+			<h2 class="title arabic" id="pharmacy1"> Order your medications and everything you need from the pharmacy
+			</h2>
+			<div class="search-container">
+				<Select type="search" class='boxxx text-center p-3 '>
+					<option value="1" class="white" active>Choose Your Pharmacy</option>
+					<option value="2">EL- Ezaby Pharmcy</option>
+					<option value="3">EL-Bendary pharmcy</option>
+					<option value="4">Hisham & Foad Pharmacy</option>
+					<option value="5">El tarboshy pharmacy</option>
+				</Select>
+			</div>
+			<div class="section2-icons">
+				<label>
+					<div class="icon-holder">
+						<img style="margin-left: 10px;" src="images/clipboard-list-solid.svg" class="iconsss1">
+
+						<input type="file" accept="image/*">
+					</div>
+					<div id="pharmacy2" class="arabic">Order by prescription</div>
+				</label>
+
+				<label>
+					<div class="icon-holder">
+
+						<img style="margin-left: 10px;" src="images/pills-solid.svg" class="iconsss2">
+						<input type="file" accept="image/*">
+					</div>
+					<div id="pharmacy3" class="arabic">Order with product image</div>
+				</label>
+
+				<label>
+					<div class="icon-holder">
+						<img style="margin-left: 10px;" src="images/phone-solid.svg" class="iconsss3">
+						<button type="button" class="btn btn-mod" data-bs-toggle="modal"
+							data-bs-target="#staticBackdrop">
+
+
+						</button>
+					</div>
+					<div id="pharmacy4" class="arabic">Contact with pharmacist</div>
+
+					<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+						tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-style shadow modal-content">
+								<div class="modal-header">
+									<h5 id="pharmacy1" class="modal-title text-dark modal-h arabic"
+										id="staticBackdropLabel">
+										Contact a pharmacist</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<div class="shadow p-3 d-flex justify-content-end flex-row mb-5 rounded">
+										<a class="me-3 modal-a" href="http://16676">Call us 16676</a>
+										<i class="fas fa-phone"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</label>
+			</div>
+		</section>
+
+		<!-- End Schedule -->
+		<br />
+		<br />
+
+		<br />
+		<br />
+		<br />
+		<br />
+
+		<div class="work">
+			<h2 id="gallery1" class="arabic">Specialized Therapists | Prioritize Your Mental Health</h2>
+			<br />
+			<br />
+
+
+
+			<div class="container-fluid text-center">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="hours">
+							<h2 id="work1">Working Hours</h2>
+							<div class="time">
+								<div id="work2" class="booking arabic">Mon - Wed</div>
+								<div id="work3" class="booking arabic">8 AM - 7 PM</div>
+								<div class="booking">
+									<button href="#form" type="button" id="work4" class="btn-white arabic">
+										Book
+									</button>
+								</div>
+							</div>
+							<div class="time">
+								<div id="work5" class="booking arabic">Thursday</div>
+								<div id="work6" class="booking arabic">8 AM - 7 PM</div>
+								<div class="booking">
+									<button href="#form" type="button" id="work7" class="btn-white arabic">
+										Book
+									</button>
+								</div>
+							</div>
+							<div class="time">
+								<div id="work8" class="booking arabic">Friday</div>
+								<div id="work9" class="booking arabic">8 AM - 7 PM</div>
+								<div class="booking">
+									<button href="#form" type="button" id="work10" class="btn-white arabic">
+										Book
+									</button>
+								</div>
+							</div>
+							<div class="time">
+								<div id="work11" class="booking arabic">Sat - Sun</div>
+								<div id="work12" class="booking arabic">8 AM - 7 PM</div>
+								<div class="booking">
+									<button href="#form" type="button" id="work13" class="btn-white arabic">
+										Book
+									</button>
+								</div>
+							</div>
+							<div class="time">
+								<h4 id="work14" class="arabic">Time not Flexible?</h4>
+								<p id="work15" class="arabic">We povide high, quality integrated healthcare services,
+									based on a patient - centered</p>
+								<br><br>
+								<button class="btn-white arabic" id="work16" href="#form">
+									Suggest Checkup Time
+								</button>
+							</div>
+						</div>
+
+					</div>
+					<div class="col-md-4">
+						<div class="response">
+							<a href="javascript:void(0);">
+								<div class="response-bg"
+									style="background-image: url(images/pexels-cottonbro-4098152.jpg);"></div>
+								<div class="response-content">
+									<div class="response-icon">
+										<i class="fab fa-canadian-maple-leaf"></i>
+									</div>
+									<h2 id="response1" class="arabic">Attention to</h2>
+									<H2 id="response2" class="arabic">Mental Health</H2>
+									<p id="response3" class="arabic">Currently, there is increasing interest in mental
+										health and its importance. People are looking for services and resources to help
+										them maintain their mental and emotional well-being. </p>
+									<p id="response4" class="arabic">Specialized Expertise: Providing services by
+										specialized therapists gives customers confidence that they are in the hands of
+										well-trained professionals in providing mental healthcare. </p>
+									<br>
+									<p id="response5" class="arabic"> Emphasizing specialized therapists underscores our
+										commitment to providing tailored, high-quality mental health care.</p>
+									<button type="button" id="response6" class="read-more mt-20px arabic">
+										Read More
+										<i class="fas fa-arrow-right"></i>
+									</button>
+
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="response">
+							<a href="javascript:void(0);">
+								<div class="response-bg"
+									style="background-image: url(images/pexels-cottonbro-4101143.jpg);"></div>
+								<div class="response-content">
+									<div class="response-icon">
+										<i class="fas fa-leaf"></i>
+									</div>
+									<h2 id="information1" class="arabic"> Meeting Unique </h2>
+									<h2 id="information2" class="arabic"> Needs</h2>
+									<p id="information3" class="arabic"> Many individuals seek therapy services that fit
+										their unique needs and personal circumstances. Providing specialized therapists
+										can better meet these needs. </p>
+									<p id="information4" class="arabic"> Excellence and Diversity: Offering a variety of
+										specialized therapists can attract different customers who are looking for
+										specific types of therapy or services. </p>
+									<p id="information5" class="arabic"> Positive Brand Marketing: This theme can be
+										used in marketing efforts to attract new customers and build a strong brand
+										reputation for a business that prioritizes its customers' mental health.</p>
+									<button type="button" id="information6" class="read-more mt-20px arabic">
+										Read More
+										<i class="fas fa-arrow-right"></i>
+									</button>
+
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				</text-center>
+			</div>
+
+
+
+
+
+
+
+
+			<!---------------------- start part2 -------------------------->
+			<!-- <div class="p">
+	<div class="row part2 justify-content-center mx-0 my-4">
+		<div class="col-lg-8 col-md-12 col-sm-12">
+			<h1 class="part2Head"> سلامتك النفسية أولوية   </h1>
+		   
+				
+		</div>
+	</div>
+	<div class="row part2b justify-content-center mx-0 my-4">
+		<div class="col-lg-4 col-md-6 smDIV">
+			<div    class="card part2bCard flex-sm-column flex-md-row">
+				<div>
+					<img src="images/2.jpg" class="card-img i" alt="...">
+				</div>
+				<div class="card-body">
+					<h2 class="card-title">Doctor Shadi Ezzat </h2> 
+					<p class="card-text">
+						أحصل علي استشارة هاتفيه مع معالج نفسي
+					</p>
+					<a href="#form" class="fs-2">
+						<span>اتصل الان </span>
+
+						
+						<span><i class="fas fa-caret-left text-danger"></i></span>
+					</a>
+				</div>
+			</div>
+		</div> -->
+			<!-- <div class="col-lg-4 col-md-6 smDIV">
+			<div class="card part2bCard flex-sm-column flex-md-row">
+				<div>
+					<img src="images/1000_F_478521955_B4eXwU6lWSfXLYg4L3Juc8Y9TvHKRauF.jpg" class="card-img i" alt="...">
+				</div>
+				<div class="card-body">
+					<h2 class="card-title"> Doctor mai eissa   </h2> 
+					<p class="card-text">
+					احجز معاد زيارة
+					</p>
+					<a href="#form" class="fs-2">
+						<span>احجز زيارة </span>
+						<span><i class="fas fa-caret-left text-danger"></i></span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div> -->
+			<!---------------------- start part3 --------------------------->
+
+
+
+
+			<BR>
+			<BR>
+			<!-- End Gallery -->
+			<section id="Dentists44" class="section__container doctors__container">
+				<div class="doctors__header">
+					<div class="doctors__header__content">
+						<h2 class="section__header arabic" id="doctor1">Our Special Dentists</h2>
+						<p id="doctor2" class="arabic">
+							We take pride in our exceptional team of doctors, each a specialist
+							in their respective fields.
+						</p>
+					</div>
+					<div class="doctors__nav">
+						<span><i class="ri-arrow-left-line"></i></span>
+						<span><i class="ri-arrow-right-line"></i></span>
+					</div>
+				</div>
+				<div class="doctors__grid">
+					<div class="doctors__card">
+						<div class="doctors__card__image">
+							<img src="images/doctor-1.jpg" alt="doctor" />
+							<div class="doctors__socials">
+
+								<span><i class="ri-heart-fill"></i></span>
+
+							</div>
+						</div>
+						<h4 id="doctor3" class="arabic">Dr. Yassmin marey</h4>
+						<p> <a class="book" href="#form"></a> Book Now</a> | 0403325258</p>
+					</div>
+					<div class="doctors__card">
+						<div class="doctors__card__image">
+							<img src="images/doctor-2.jpg" alt="doctor" />
+							<div class="doctors__socials">
+
+								<span><i class="ri-heart-fill"></i></span>
+
+							</div>
+						</div>
+						<h4 id="doctor6" class="arabic">Dr. Mouhamed Yousry</h4>
+						<p><a class="book" href="#form">Book Now</a> | 01127869715</p>
+					</div>
+					<div class="doctors__card">
+						<div class="doctors__card__image">
+							<img src="images/doctor-3.jpg" alt="doctor" />
+							<div class="doctors__socials">
+
+								<span><i class="ri-heart-fill"></i></span>
+
+							</div>
+						</div>
+						<h4 id="doctor9" class="arabic">Dr. Ashraf Sharaf EL-Din </h4>
+						<p> <a class="book" href="#form">Book Now</a>| 0506910789</p>
+					</div>
+				</div>
+			</section>
+
+
+			<!-- start swiper-->
+
+
+			<!---------------------- end slider --------------------------->
+			<!---------------------- start part2 -------------------------->
+			<div class="p">
+				<div class="row part2 justify-content-center mx-0 my-4">
+					<div class="col-lg-8 col-md-12 col-sm-12">
+						<h1 class="part2Head">حلول جديدة لرعاية أفضل ليك</h1>
+
+
+					</div>
+				</div>
+				<div class="row part2b justify-content-center mx-0 my-4">
+					<div class="col-lg-4 col-md-6 smDIV">
+						<div class="card part2bCard flex-sm-column flex-md-row">
+							<div>
+								<img src="images/part2Img1.png" class="card-img" alt="...">
+							</div>
+							<div class="card-body">
+								<h2 class="card-title">مكالمة دكتور</h2>
+								<p class="card-text">
+									للمتابعة عبر مكالمة صوتية او فيديو
+								</p>
+								<a href=".#form" class="fs-2">
+									<span>احجز الان </span>
+									<span><i class="fas fa-caret-left text-danger"></i></span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 smDIV">
+						<div class="card part2bCard flex-sm-column flex-md-row">
+							<div>
+								<img src="images/part2Img2.png" class="card-img i" alt="...">
+							</div>
+							<div class="card-body">
+								<h2 class="card-title"> زيارة منزلية</h2>
+								<p class="card-text">
+									اختار التخصص والدكتور هيجيلك البيت
+								</p>
+								<a href="#form" class="fs-2">
+									<span>احجز زيارة </span>
+									<span><i class="fas fa-caret-left text-danger"></i></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!---------------------- start part3 --------------------------->
+			<div class="part3" style="width: 100%;">
+				<div class="row justify-content-center">
+					<div class="col-lg-8 row justify-content-center" id="p3">
+						<div class="part3logo col-1 align-self-center">
+							<img src="images/part3logo.png" class="img-fluid">
+						</div>
+						<div class="col-10">
+							<h2>عندك اعراض كورونا؟</h2>
+							<p>
+								تقدر تسال وتستفسر عن فيروس كورونا بمكالمة مجانية مع دكتور
+								باطنة برعاية وزارة الصحة والسكان, من الساعة 8ص ل 12ص.
+							</p>
+							<h3 class="d-block d-md-none">
+								<a href="./Covid.html" class="fs-2">
+									<span> كلم دكتور مجانا </span>
+									<span><i class="fas fa-caret-left text-danger"></i></span>
+								</a>
+							</h3>
+						</div>
+
+					</div>
+				</div>
+				<hr style="width: 65%; margin: 2% 18%;">
+				<div class="row justify-content-center">
+					<div class="col-11 col-md-11 col-lg-8" style="margin-bottom: 2em; color: rgb(111, 112, 114);">
+						<h2 class="c">
+							<span> اختار من احسن العروض </span>
+							<span style="float: left;">
+								<a href="#form" class="fs-2">
+									<span>احجز الان </span>
+									<span><i class="fas fa-caret-left text-danger"></i></span>
+								</a>
+							</span>
+						</h2>
+					</div>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col-11 col-md-11 col-lg-8 position-relative">
+						<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+							<div class="carousel-inner position-relative" id="carousel">
+								<div class="carousel-item active">
+									<div class="row d-flex">
+										<div class="col-6 col-md-3 ">
+											<div class="card position-relative">
+												<a href="./healthOfTeath.html">
+													<img src="images/Orthopedics-in-sayaa-med-1.jpg "
+														class="card-img-top" alt="...">
+												</a>
+												<div class="card-body">
+													<h5 class=" cT">Dr. Ahmed EL-Shaer </h5>
+													<p>
+														<span> 400 جنيه</span>
+														<span> 100 جنيه</span>
+													</p>
+													<P>Bones</P>
+												</div>
+												<span class="badge descound bg-danger position-absolute 
+                                            translate-middle"> 75% خصم
+												</span>
+											</div>
+										</div>
+										<div class="col-6 col-md-3">
+											<div class="card position-relative">
+												<img src="images/iStock-623127416.jpg " class="card-img-top" alt="...">
+												<div class="card-body">
+													<h5 class=" cT"> DR.Aya Medhat </h5>
+													<p>
+														<span> 150 جنيه</span>
+														<span> 81 جنيه</span>
+													</p>
+													<P>Obstetrics and gynecology specialist</P>
+												</div>
+												<span class="badge descound bg-danger position-absolute 
+                                            translate-middle"> 64% خصم
+												</span>
+											</div>
+										</div>
+										<div class="col-6 col-md-3">
+											<div class="card position-relative">
+												<img src="images/AdobeStock_135096369-1024x536.jpeg"
+													class="card-img-top" alt="...">
+												<div class="card-body">
+													<h5 class=" cT">DR. Amr Fayez</h5>
+													<p>
+														<span> 640 جنيه</span>
+														<span> 320 جنيه</span>
+													</p>
+
+													<P> Vascular. consultant</P>
+													<BR>
+												</div>
+												<span class="badge descound bg-danger position-absolute 
+                                            translate-middle"> 50% خصم
+												</span>
+											</div>
+										</div>
+										<div class="col-6 col-md-3">
+											<div class="card position-relative">
+												<img src="images/GettyImages-643782350-2000-bca0b416a1374c56a8171e783bcb4384 (1).jpg"
+													class="card-img-top" alt="...">
+												<div class="card-body">
+													<h5 class=" cT"> Amira Ahmed </h5>
+													<p>
+														<span> 150 جنيه</span>
+														<span> 81 جنيه</span>
+													</p>
+													<P>spechialist of pediatrics & newborn</P>
+												</div>
+												<span class="badge descound bg-danger position-absolute 
+                                            translate-middle"> 64% خصم
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<div class="row d-flex">
+										<div class="col-6 col-md-3">
+											<div class="card position-relative">
+												<img src="images/Common-Signs-You-Need-An-ENT-Doctor.jpg"
+													class="card-img-top" alt="...">
+												<div class="card-body">
+													<h5 class=" cT"> Ahmed Saad </h5>
+													<p>
+														<span> 777 جنيه</span>
+														<span> 202 جنيه</span>
+													</p>
+													<P> specialist of Ent</P>
+												</div>
+												<span class="badge descound bg-danger position-absolute 
+                                            translate-middle"> 74% خصم
+												</span>
+											</div>
+										</div>
+										<div class="col-6 col-md-3">
+											<div class="card position-relative">
+												<img src="images/Clinical-Nutrition-hero-2-smaller.jpg"
+													class="card-img-top" alt="...">
+												<div class="card-body">
+													<h5 class=" cT"> Sara Hekal </h5>
+													<p>
+														<span> 2000 جنيه</span>
+														<span> 820 جنيه</span>
+													</p>
+													<P> Clinical Nutrition Consultant</P>
+												</div>
+												<span class="badge descound bg-danger position-absolute 
+                                            translate-middle"> 59% خصم
+												</span>
+											</div>
+										</div>
+										<div class="col-6 col-md-3">
+											<div class="card position-relative">
+												<img src="images/istockphoto-1175237010-612x612-1.jpg"
+													class="card-img-top" alt="...">
+												<div class="card-body">
+													<h5 class=" cT"> Ahmed Sameh</h5>
+													<p>
+														<span> 1800 جنيه</span>
+														<span> 756 جنيه</span>
+													</p>
+													<P>Consultanat Of Opthalmology </P>
+												</div>
+												<span class="badge descound bg-danger position-absolute 
+                                            translate-middle"> 58% خصم
+												</span>
+											</div>
+										</div>
+										<div class="col-6 col-md-3">
+											<div class="card position-relative">
+												<img src="images/chest-pain-banner-bg.jpg" class="card-img-top"
+													alt="...">
+												<div class="card-body">
+													<h5 class=" cT"> Salwa Atef </h5>
+													<p>
+														<span> 600 جنيه</span>
+														<span> 240 جنيه</span>
+													</p>
+													<P>Consultant of Chest Diseases</P>
+												</div>
+												<span class="badge descound bg-danger position-absolute 
+                                        translate-middle"> 60% خصم
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<button class="carousel-control-prev position-absolute" type="button" id="sliderBtn"
+								data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+								<i class="fas fa-chevron-left"></i>
+							</button>
+							<button class="carousel-control-next position-absolute" type="button" id="sliderBtn2"
+								data-bs-target="#carouselExampleControls" data-bs-slide="next">
+								<i class="fas fa-chevron-right"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!---------------------- end part3 --------------------------->
+
+			<!---------------------- start part4 --------------------------->
+
+
+
+		</div>
+
+
+
+		<!--bootstrap-->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+			crossorigin="anonymous"></script>
+		<!--bs for toggle tabs-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+		</script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+		</script>
+
+		<!--fontawesome-->
+		<script src="https://kit.fontawesome.com/7b3b5a9869.js" crossorigin="anonymous"></script>
+		<section id="specialist" class="container0">
+			<div class="card__container swiper">
+				<div class="card__content">
+
+					<h2 id="card100" class="arabic">Specialized Doctors | high rated doctors in every fields </h2>
+					<BR>
+					<BR>
+					<div class="swiper-wrapper">
+						<article class="card__article swiper-slide">
+							<div class="card__image">
+								<img src="images/images (7).jpg " alt="image" class="card__img">
+								<div class="card__shadow"></div>
+							</div>
+
+							<div class="card__data">
+								<h3 class="card__name arabic" id="card1">Dr. Ebraam Albeir</h3>
+								<p id="card2" class="card__description arabic">
+									Professor of neurology and psychologicalNeurologist
+								</p>
+
+								<a href="#form" class="card__button arabic" id="card3">Book Now</a>
+							</div>
+						</article>
+
+						<article class="card__article swiper-slide">
+							<div class="card__image">
+								<img src="images/unnamed.jpg  " alt="image" class="card__img">
+								<div class="card__shadow"></div>
+							</div>
+
+							<div class="card__data">
+								<h3 class="card__name arabic" id="card4">Dr.Fatma Eldeeb </h3>
+								<p class="card__description arabic" id="card5">
+									Consultant Psychiatrist marriage&family counselor Addiction Treatment
+								</p>
+
+								<a href="#form" class="card__button arabic" id="card6">Book Now</a>
+							</div>
+						</article>
+
+						<article class="card__article swiper-slide">
+							<div class="card__image">
+								<img src="images/images (5).jpg" alt="image" class="card__img">
+								<div class="card__shadow"></div>
+							</div>
+
+							<div class="card__data">
+								<h3 class="card__name arabic" id="card7"> Dr. Mohamed AbdelMageed </h3>
+								<p class="card__description arabic" id="card8">
+									consultant of internal medicine,diabetes and endocrinology
+								</p>
+
+								<a href="#form" class="card__button arabic" id="card9">Book Now</a>
+							</div>
+						</article>
+
+						<article class="card__article swiper-slide">
+							<div class="card__image">
+								<img src="images/images (1).jpg" alt="image" class="card__img">
+								<div class="card__shadow"></div>
+							</div>
+
+							<div class="card__data">
+								<h3 class="card__name arabic" id="card10">Dr. Ahmed Elsheshy </h3>
+								<p class="card__description arabic" id="card11">
+									ENT consultant in El-Minshawy and health insurance Hospitals in Tanta
+								</p>
+
+								<a href="#form" class="card__button arabic" id="card12">Book Now</a>
+							</div>
+						</article>
+
+						<article class="card__article swiper-slide">
+							<div class="card__image">
+								<img src="images/young-doctor-standing-arms-crossed-260nw-1151541107.jpg" alt="image"
+									class="card__img">
+								<div class="card__shadow"></div>
+							</div>
+
+							<div class="card__data">
+								<h3 class="card__name arabic" id="card13">Dr. Mahmoud Alheet</h3>
+								<p class="card__description arabic" id="card14">
+									Consultant of Chest diseases Specialized in Adult Chest and Respiratory
+								</p>
+
+								<a href="#form" class="card__button arabic" id="card15">Book Now</a>
+							</div>
+						</article>
+					</div>
+				</div>
+
+				<!-- Navigation buttons -->
+				<div class="swiper-button-next">
+					<i class="ri-arrow-right-s-line"></i>
+				</div>
+
+				<div class="swiper-button-prev">
+					<i class="ri-arrow-left-s-line"></i>
+				</div>
+
+				<!-- Pagination -->
+				<div class="swiper-pagination"></div>
+			</div>
+		</section>
+
+
+		<!--=============== SWIPER JS ===============-->
+		<script src="js/swiper-bundle.min.js"></script>
+
+		<!--=============== MAIN JS ===============-->
+		<script src="js/wow.min.js"></script>
+		<!-- End Price -->
+
+
+
+
+
+		<!--=============== SWIPER JS ===============-->
+		<script src="js/swiper-bundle.min.js"></script>
+
+		<!--=============== MAIN JS ===============-->
+		<script src="js/wow.min.js"></script>
+		<!-- End Price -->
+
+		<!-- Start Contact -->
+
+		<!-- This is main Area Start ++ -->
+		<div class="bf-container" id="form">
+
+			<!-- Main form Body Start -->
+			<div class="bf-body">
+
+				<!-- Form head -->
+				<div class="bf-head">
+					<h1>Booking Form</h1>
+					<p> Now it's easier and faster</p>
+				</div>
+				<!-- Form head -->
+
+				<!-- Form Body Box -->
+				<form class="bf-body-box">
+
+
+					<div class="bf-row">
+
+						<div class="bf-col-6">
+							<p>Your Name</p>
+							<input type="text" name="fname" id="fname" placeholder="Your Name">
+						</div>
+						<div class="bf-col-6">
+							<p>Phone Number</p>
+							<input type="email" name="email" id="email" placeholder="Phone Number">
+						</div>
+
+					</div>
+					<div class="bf-row">
+						<div class="bf-col-6">
+							<p>Select Specialist</p>
+							<select name="s-select" id="">
+								<option>Select Specialist</option>
+								<option value="labs1">Dr. Ahmed EL-Shaer (Bones)</option>
+								<option value="labs2">Dr. Aya Medhat (Obstetrics and gynecology specialist)</option>
+								<option value="labs3">DR. Amr Fayez (Vascular. consultant)</option>
+								<option value="labs4">Dr. Amira Ahmed (spechialist of pediatrics & newborn)</option>
+								<option value="labs5">Dr. Ahmed Saad (Specialist of Ent)</option>
+								<option value="labs6">Dr. Sara Hekal (Clinical Nutrition Consultant)</option>
+								<option value="labs7">Dr. Ahmed Sameh (Consultanat Of Opthalmology)</option>
+								<option value="labs8">Dr. Salwa Atef (Consultant of Chest Diseases)</option>
+								<option value="labs9">Dr. Ebraam Albeir (Pr. of Neurology & Psychological)</option>
+								<option value="labs10">Dr. Fatma Eldeeb (Consultant Psychiatrist Marriage & Family)
+								</option>
+								<option value="labs11">Dr. Mohammed Abd El-Mageed (Consultant of Internal Medicine)
+								</option>
+								<option value="labs12">Dr. Ahmed El-Sheshy (ENT consultant in El-Minshawy)</option>
+								<option value="labs13">Dr. Mahmoud Al-heet (Consultant of Chest diseases)</option>
+								<option value="labs14">Dr. Yasmeen Marey (Dentist)</option>
+								<option value="labs15">Dr. Mouhamed Yousry (Dentist)</option>
+								<option value="labs16">Dr. Ashraf Sharaf El-Din (Dentist)</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="bf-row">
+
+						<div class="bf-col-6">
+							<p>Select Date</p>
+							<input type="date" name="date" id="date">
+						</div>
+
+						<div class="bf-col-6">
+							<p>Select Time</p>
+							<select name="s-select" id="">
+								<option>Select Time</option>
+								<option value="labs1">9:00 AM</option>
+								<option value="labs2">9:30 AM</option>
+								<option value="labs3">10:00 AM</option>
+								<option value="labs4">10:30 AM</option>
+								<option value="labs5">11:00 AM</option>
+								<option value="labs6">11:30 AM</option>
+								<option value="labs7">12:00 PM</option>
+								<option value="labs8">12:30 Pm</option>
+								<option value="labs9">1:00 PM</option>
+								<option value="labs10">1:30 PM</option>
+								<option value="labs10">2:00 PM</option>
+								<option value="labs10">2:30 PM</option>
+								<option value="labs10">3:00 PM</option>
+								<option value="labs10">3:30 PM</option>
+								<option value="labs10">4:00 PM</option>
+								<option value="labs10">4:30 PM</option>
+								<option value="labs10">5:00 PM</option>
+							</select>
+						</div>
+
+					</div>
+
+					<div class="bf-row">
+
+						<div class="bf-col-6">
+							<p>Select Services</p>
+							<select name="s-select" id="">
+								<option>Select Services</option>
+								<option value="labs1">Al-Hayah Lab</option>
+								<option value="labs2">Al-Borg Lab</option>
+								<option value="labs3">El-Safwa Lab</option>
+								<option value="labs4">Al-Mokhtabar Lab</option>
+								<option value="labs6">Egyptian French Center (Appointment)</option>
+								<option value="labs5">Egyptian French Center (Home Session)</option>
+								<option value="labs6">Al-Ayashi Center (Appointment)</option>
+								<option value="labs6">Al-Ayashi Center (Home Session)</option>
+							</select>
+						</div>
+
+						<div class="bf-col-6">
+							<p>Choose Medical Tests</p>
+							<select name="s-select" id="">
+								<option>Medical Tests</option>
+								
+								<option value="labs1">Liver Function (SGPT, SGOT)</option>
+								<option value="labs2">Complete Blood Count Analysis (CBC)</option>
+								<option value="labs3">Fasting Blood Suger Analysis (FBS)</option>
+								<option value="labs4">Urine Analysis</option>
+								<option value="labs5">Glycated Hemoglobin Analysis (HBA1C)</option>
+								<option value="labs6">Thyroid Gland Hormones (T3+T4+TSH+Free T3+ Free TH4)</option>
+								<option value="labs6">Rast Specific ige: Inhalant, food, or Pediatric</option>
+								<option value="labs6">CA15.3*CEA*MCA</option>
+								<option value="labs6">CEA*CA19.9*NSE</option>
+								<option value="labs6">HIV Antibodies</option>
+								<option value="labs6">Blood Chromosomes</option>
+								<option value="labs6">Erythrocyte Sedimentation rate (ESR)</option>
+								<option value="labs6">Kidney Function Analysis (Urea, Creatinine)</option>
+								<option value="labs6">Glucose Curve</option>
+								<option value="labs6">Postprandial Blood Suger Analysis (2HRPP)</option>
+								<option value="labs6">Creatinine + Urea + Uric Acid + Urine Analysis + Sodium & Potassium</option>
+								<option value="labs6">Clotting Time (CT)</option>
+								<option value="labs6">Bleeding Time (BT)</option>
+							</select>
+						</div>
+
+
+
+					</div>
+
+					<div class="bf-row">
+
+						<div class="bf-col-6">
+							<p>Select Date</p>
+							<input type="date" name="date" id="date">
+						</div>
+
+						<div class="bf-col-6">
+							<p>Select Time</p>
+							<select name="s-select" id="">
+								<option>Select Time</option>
+								<option value="labs1">9:00 AM</option>
+								<option value="labs2">9:30 AM</option>
+								<option value="labs3">10:00 AM</option>
+								<option value="labs4">10:30 AM</option>
+								<option value="labs5">11:00 AM</option>
+								<option value="labs6">11:30 AM</option>
+								<option value="labs7">12:00 PM</option>
+								<option value="labs8">12:30 Pm</option>
+								<option value="labs9">1:00 PM</option>
+								<option value="labs10">1:30 PM</option>
+								<option value="labs10">2:00 PM</option>
+								<option value="labs10">2:30 PM</option>
+								<option value="labs10">3:00 PM</option>
+								<option value="labs10">3:30 PM</option>
+								<option value="labs10">4:00 PM</option>
+								<option value="labs10">4:30 PM</option>
+								<option value="labs10">5:00 PM</option>
+							</select>
+						</div>
+
+					</div>
+
+
+					<div class="bf-row">
+
+						<div class="bf-col-12">
+							<p>Messages</p>
+							<textarea name="Messages" id="Messages" cols="10" rows="2"></textarea>
+						</div>
+
+
+					</div>
+
+					<div class="popup55 center">
+			<div class="icon">
+				<i class="fas fa-check"></i>
+			</div>
+			<div class="title">
+				Your request has been successfully recorded !
+			</div>
+			<div class="descreiption">
+				Thank you for your trust 
+				you will be informed of any updates regarding your request as soon as possible.
+			</div>
+			<div class="dismiss-btn">
+				<button id="dismiss-popup-btn">
+					ok
+				</button>
+			</div>
+		</div>
+
+
+					<div class="bf-row">
+
+						<div class="bf-col-3 center">
+							<button class="center550" id="open-popup-btn">
+								BOOK NOW
+							</button>
+						</div>
+
+
+					</div>
+
+					<script>
+						document.getElementById("open-popup-btn").addEventListener("click", function () {
+							document.getElementsByClassName("popup55")[0].classList.add("active");
+						});
+
+						document.getElementById("dismiss-popup-btn").addEventListener("click", function () {
+							document.getElementsByClassName("popup55")[0].classList.remove("active");
+						});
+					</script>
+
+
+
+				</form>
+
+
+
+				<!-- Form Body Box -->
+
+
+
+			</div>
+			<!-- Main form Body End -->
+
+		</div>
+		
+		<!-- This is main Area End -->
+
+
+		<!-- End Contact -->
+
+
+
+		<!-- jquery -->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function () {
+
+				$(".ham-burger, .nav ul li a").click(function () {
+
+					$(".nav").toggleClass("open")
+
+					$(".ham-burger").toggleClass("active");
+				})
+				$(".accordian-container").click(function () {
+					$(".accordian-container").children(".body").slideUp();
+					$(".accordian-container").removeClass("active")
+					$(".accordian-container").children(".head").children("span").removeClass("fa-angle-down").addClass("fa-angle-up")
+					$(this).children(".body").slideDown();
+					$(this).addClass("active")
+					$(this).children(".head").children("span").removeClass("fa-angle-up").addClass("fa-angle-down")
+				})
+
+				$(".nav ul li a, .go-down").click(function (event) {
+					if (this.hash !== "") {
+
+						event.preventDefault();
+
+						var hash = this.hash;
+
+						$('html,body').animate({
+							scrollTop: $(hash).offset().top
+						}, 800, function () {
+							window.location.hash = hash;
+						});
+
+						// add active class in navigation
+						$(".nav ul li a").removeClass("active")
+						$(this).addClass("active")
+					}
+				})
+			})
+
+		</script>
+		<script src="js/wow.min.js"></script>
+		<script>
+			wow = new WOW(
+				{
+					animateClass: 'animated',
+					offset: 0,
+				}
+			);
+			wow.init();
+		</script>
+		<footer class="footer">
+			<div class="section__container footer__container">
+				<div class="footer__col">
+					<h3 id="footer1" class="arabic">Near <span id="footer2" class="arabic">To You</span></h3>
+					<p id="footer3" class="arabic">
+						We are honored to be a part of your healthcare journey and committed
+						to delivering compassionate, personalized, and top-notch care every
+						step of the way.
+					</p>
+					<p id="footer4" class="arabic">
+						Trust us with your health, and let us work together to achieve the
+						best possible outcomes for you and your loved ones.
+					</p>
+				</div>
+				<div class="footer__col">
+					<h4 id="footer5" class="arabic">About Us</h4>
+					<p id="footer6" class="arabic">Home</p>
+					<p id="footer8" class="arabic">About Us</p>
+					<p id="footer9" class="arabic">Work With Us</p>
+					<p id="footer10" class="arabic">Our Blog</p>
+					<p id="footer11" class="arabic">Terms & Conditions</p>
+				</div>
+				<div class="footer__col">
+					<h4 id="footer12" class="arabic">Services</h4>
+					<p id="footer13" class="arabic">Search Terms</p>
+					<p id="footer14" class="arabic">Advance Search</p>
+					<p id="footer15" class="arabic">Privacy Policy</p>
+					<p id="footer16" class="arabic">Suppliers</p>
+					<p id="footer17" class="arabic">Our Stores</p>
+				</div>
+				<div class="footer__col">
+					<h4 id="footer18" class="arabic">Contac Us</h4>
+					<p id="footer19" class="arabic">
+						<i class="ri-map-pin-2-fill"></i> 123, London Bridge Street, London
+					</p>
+					<p id="footer20" class="arabic"><i class="ri-mail-fill"></i> support@care.com</p>
+					<p id="footer21" class="arabic"><i class="ri-phone-fill"></i> (+012) 3456 789</p>
+				</div>
+			</div>
+			<div class="footer__bar">
+				<div class="footer__bar__content">
+
+					<div class="footer__socials">
+						<span><i class="ri-instagram-line"></i></span>
+						<span><i class="ri-facebook-fill"></i></span>
+						<span><i class="ri-heart-fill"></i></span>
+						<span><i class="ri-twitter-fill"></i></span>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
